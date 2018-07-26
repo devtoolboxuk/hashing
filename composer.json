@@ -1,0 +1,24 @@
+{
+  "name": "devtoolboxuk/Hashing",
+  "description": "Hashing Package",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "": "src/",
+      "Devtoolboxuk\\Hashing\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Rob Wilson",
+      "email": "rob@dev-toolbox.co.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  }
+}
