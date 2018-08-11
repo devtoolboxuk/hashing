@@ -8,16 +8,16 @@ Hashing Service
 
 ## Table of Contents
 
-- [Background](#background)
-- [Usage](#usage)
-- [Maintainers](#maintainers)
-- [License](#license)
+- [Background](#Background)
+- [Usage](#Usage)
+- [Maintainers](#Maintainers)
+- [License](#License)
 
 ## Background
 
 Although there are many hashing services out there, I decided to create a basic one for use on some of my projects.
 
-The Unit Tests have been run on PHP 7.2, but the code will happily run on PHP 5.4 (for all of those legacy projects still out there.)
+The Unit Tests have been run on PHP 5.4 and 7.2. This is to help support legacy projects.
 
 ## Usage
 
@@ -81,13 +81,10 @@ $this->hashingKey = $this->hashingService->getHashingKey();
 
 The hashing function can also be changed to use either hmac or not (others may come along...)
 
-
 ##### Set Hashing Function
 ```sh
 $this->hashingService->setHashFunction('hmac');
 ```
-
-
 
 ## Maintainers
 
