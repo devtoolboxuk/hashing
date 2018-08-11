@@ -1,5 +1,5 @@
 {
-  "name": "devtoolboxuk/Hashing",
+  "name": "Devtoolboxuk/Hashing",
   "description": "Hashing Package",
   "type": "library",
   "autoload": {
@@ -14,5 +14,11 @@
       "email": "rob@dev-toolbox.co.uk"
     }
   ],
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require": {
+
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  }
 }
