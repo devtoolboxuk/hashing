@@ -1,6 +1,9 @@
 # hashing
 Hashing Service
 
+[![Build Status](https://api.travis-ci.org/devtoolboxuk/hashing.svg?branch=master)](https://travis-ci.org/devtoolboxuk/hashing)
+
+
 ## Table of Contents
 
 - [Background](#background)
