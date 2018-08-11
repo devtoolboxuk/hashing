@@ -1,6 +1,6 @@
 <?php
 
-namespace Devtoolboxuk\Hashing;
+namespace devtoolboxuk\hashing;
 
 class HashingService
 {

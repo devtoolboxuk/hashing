@@ -1,6 +1,6 @@
 <?php
 
-namespace Devtoolboxuk\Hashing;
+namespace devtoolboxuk\hsashing;
 
 use PHPUnit\Framework\TestCase;
 

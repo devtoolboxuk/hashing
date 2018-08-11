@@ -1,11 +1,11 @@
 {
-  "name": "Devtoolboxuk/Hashing",
+  "name": "devtoolboxuk/hashing",
   "description": "Hashing Package",
   "type": "library",
   "autoload": {
     "psr-4": {
       "": "src/",
-      "Devtoolboxuk\\Hashing\\": "src/"
+      "devtoolboxuk\\hashing\\": "src/"
     }
   },
   "authors": [
