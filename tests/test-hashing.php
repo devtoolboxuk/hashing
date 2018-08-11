@@ -1,8 +1,6 @@
 <?php
 
-namespace Devtoolboxuk\Hashing;
-
-use PHPUnit\Framework\TestCase;
+require_once 'src/HashingService.php';
 
 class hashing extends TestCase
 {
