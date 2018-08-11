@@ -1,6 +1,6 @@
 <?php
 
-namespace devtoolboxuk\hsashing;
+namespace devtoolboxuk\hashing;
 
 use PHPUnit\Framework\TestCase;
 
@@ -16,6 +16,7 @@ class hashing extends TestCase
     function __construct($name = null, array $data = [], $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
+
         $this->hashingService = new HashingService();
     }
 
