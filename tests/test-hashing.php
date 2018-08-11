@@ -155,7 +155,7 @@ class hashing extends TestCase
         $this->setHashingKey('testingkey');
         $this->hashingService->setAlgorithm('sha512');
 
-        $this->hashingService->setHashFunction('normaly');
+        $this->hashingService->setHashFunction('normal');
         $this->hashingService->hash($this->testData);
         $this->assertSame('afb58a348d3d9289ed045349f965621cfd48920b0517e3bb3691cd7229c5cab003d3c3e7351243eefd353b08dca7b14023c5c282fc1df2b8baea33843efd4c7d',
             $this->hashingService->getHashedData());
