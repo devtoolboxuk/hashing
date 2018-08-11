@@ -2,6 +2,8 @@
 Hashing Service
 
 [![Build Status](https://api.travis-ci.org/devtoolboxuk/hashing.svg?branch=master)](https://travis-ci.org/devtoolboxuk/hashing)
+[![Coveralls](https://coveralls.io/repos/github/devtoolboxuk/hashing/badge.svg?branch=master)](https://coveralls.io/github/devtoolboxuk/hashing?branch=master)
+[![CodeCov](https://codecov.io/gh/devtoolboxuk/hashing/branch/master/graph/badge.svg)](https://codecov.io/gh/devtoolboxuk/hashing)
 
 
 ## Table of Contents
@@ -15,7 +17,7 @@ Hashing Service
 
 Although there are many hashing services out there, I decided to create a basic one for use on some of my projects.
 
-The Unit tests have been run on PHP 7.2, but the code will happily run on PHP 5.4 (for all of those legacy projects still out there.)
+The Unit Tests have been run on PHP 7.2, but the code will happily run on PHP 5.4 (for all of those legacy projects still out there.)
 
 ## Usage
 
