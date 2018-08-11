@@ -6,7 +6,7 @@ class HashingService
 {
 
     const HMAC = 'hmac';
-    const OTHER = 'default';
+    const OTHER = 'normal';
 
     const SHA256 = 'sha256';
     const SHA384 = 'sha384';
@@ -18,6 +18,28 @@ class HashingService
     private $hashingKey;
     private $hashedData;
 
+    public function hash($data)
+    {
+
+        switch ($this->getHashFunction()) {
+            case self::HMAC:
+                $data = base64_encode(hash_hmac($this->getAlgorithm(), $data, $this->getHashingKey(), true));
+                break;
+            default:
+                $ctx = hash_init($this->getAlgorithm());
+                hash_update($ctx, $data);
+                $data = hash_final($ctx, false);
+                break;
+        }
+
+        $this->setHashedData($data);
+    }
+
+    public function getHashFunction()
+    {
+        return $this->hashFunction;
+    }
+
     public function setHashFunction($type = self::HMAC)
     {
         switch ($type) {
@@ -28,23 +50,6 @@ class HashingService
                 $this->hashFunction = self::OTHER;
                 break;
         }
-    }
-
-    public function hash($data, $rawOutput = true)
-    {
-
-        switch ($this->hashFunction) {
-            case self::HMAC:
-                $data = base64_encode(hash_hmac($this->getAlgorithm(), $data, $this->getHashingKey(), $rawOutput));
-                break;
-            default:
-                $ctx = hash_init($this->getAlgorithm());
-                hash_update($ctx, $data);
-                $data = hash_final($ctx, $rawOutput);
-                break;
-        }
-
-        $this->setHashedData($data);
     }
 
     public function getAlgorithm()

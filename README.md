@@ -1,38 +1,93 @@
 # hashing
-HMAC Hashing Service
+Hashing Service
 
 ## Table of Contents
 
 - [Background](#background)
-- [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
-- [Contribute](#contribute)
 - [License](#license)
 
 ## Background
 
-## Install
-Install using Composer
+Although there are many hashing services out there, I decided to create a basic one for use on some of my projects.
 
-```sh
-$ Blah blah
-```
+The Unit tests have been run on PHP 7.2, but the code will happily run on PHP 5.4 (for all of those legacy projects still out there.)
 
 ## Usage
 
-usage of the hashing service
+Usage of the hashing service
 
 ```sh
-$ standard-readme-spec
-# Print
+$ composer require devtoolboxuk/Hashing
 ```
+
+Then include Composer's generated vendor/autoload.php to enable autoloading:
+
+```sh
+require 'vendor/autoload.php';
+```
+
+```sh
+use devtoolboxuk/Hashing;
+
+$this->hashingService = new HashingService();
+```
+
+
+##### Set Hashing Key
+```sh
+$this->hashingService->setHashingKey($key);
+```
+
+##### Get Hashing key
+```sh 
+$this->hashingKey = $this->hashingService->getHashingKey();
+```
+
+##### Hashing Data
+Pass in the data to be hashed.
+```sh
+$this->hashingService->hash("Test Data");
+```
+
+##### Get Hashed Data
+Returns the hash of the data.
+```sh
+$this->hashingService->getHashedData()
+```
+
+
+By default, the Hashing service uses the SHA256 Algoritm, and the HMAC Hashing Function
+
+##### Retrieve Hashed Data
+```sh
+$this->hashingService->setHashingKey($key);
+$this->hashingKey = $this->hashingService->getHashingKey();
+```
+
+The algorithm for hashing can be changed using this function, currently only the following algorithms are supported; 'sha256', 'sha384', 'sha512', 'md5'
+
+##### Set Algorithm
+```sh
+$this->hashingService->setHashingKey($key);
+$this->hashingKey = $this->hashingService->getHashingKey();
+```
+
+The hashing function can also be changed to use either hmac or not (others may come along...)
+
+
+##### Set Hashing Function
+```sh
+$this->hashingService->setHashFunction('hmac');
+```
+
+
 
 ## Maintainers
 
 [@DevToolboxUk](https://github.com/DevToolBoxUk).
 
-## Contribute
 
 ## License
 
