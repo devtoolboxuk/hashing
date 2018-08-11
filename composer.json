@@ -6,7 +6,10 @@
     "psr-4": {
       "": "src/",
       "devtoolboxuk\\hashing\\": "src/"
-    }
+    },
+    "classmap": [
+      "src"
+    ]
   },
   "authors": [
     {
@@ -17,6 +20,9 @@
   "minimum-stability": "dev",
   "require": {
 
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit"
   },
   "require-dev": {
     "phpunit/phpunit": "^7"
