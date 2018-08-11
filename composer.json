@@ -2,6 +2,7 @@
   "name": "devtoolboxuk/hashing",
   "description": "Hashing Package",
   "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "": "src/",
@@ -19,7 +20,6 @@
   ],
   "minimum-stability": "dev",
   "require": {
-
   },
   "scripts": {
     "test": "./vendor/bin/phpunit"
